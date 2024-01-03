@@ -20,7 +20,8 @@ export function ThemeSwitcher() {
   return (
     <Button
       disableRipple
-      className='bg-amber-400 dark:bg-amber-400'
+      className='dark:bg-amber-400'
+      color='secondary'
       isIconOnly
       size={'sm'}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -57,7 +57,10 @@ export function Header() {
         {items.map((item) => {
           return (
             <NavbarItem key={item.href}>
-              <Link href={item.href} className='text-gray-600 hover:text-amber-300 dark:text-white'>
+              <Link
+                href={item.href}
+                className='text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300'
+              >
                 {item.label}
               </Link>
             </NavbarItem>
@@ -66,11 +69,10 @@ export function Header() {
         <NavbarItem>
           <Link
             isExternal
-            isBlock
             showAnchorIcon
             href='https://github.com/onebis/my-portfolio'
             color='foreground'
-            className='hover:text-amber-300'
+            className='hover:text-amber-400 dark:hover:text-amber-300'
           >
             <GithubIcon className='mr-[2px]' /> github
           </Link>
