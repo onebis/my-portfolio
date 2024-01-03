@@ -5,15 +5,15 @@ import { MoreButton } from '@/app/_components/MoreButton'
 const items = [
   {
     image: 'images/iOS.png',
-    title: 'NextJsで作るブログサイト',
+    title: 'デモタイトル1',
   },
   {
     image: 'images/blog_image.png',
-    title: 'NextJsで作るブログサイト',
+    title: 'デモタイトル2',
   },
   {
     image: 'images/sample_site.png',
-    title: 'NextJsで作るブログサイト',
+    title: 'デモタイトル3',
   },
 ]
 export function Blog() {

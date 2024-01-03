@@ -1,6 +1,6 @@
-import { Image } from '@nextui-org/image'
-import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
+import { Spacer } from '@nextui-org/react'
 import { MoreButton } from '@/app/_components/MoreButton'
+import { WorkContent } from '@/app/_components/WorkContent'
 import { Account } from '@/public/icons/account'
 import { AccountDetail } from '@/public/icons/account_detail'
 import { AccountTree } from '@/public/icons/account_tree'
@@ -22,6 +22,7 @@ const items = [
     body: 'リードエンジニアとして基盤設計から担当。お客様とのディレクションを含め、検索処理の高速化・技術選定・コードレビュー・仕様調整など全般的に関わらせていただきました。',
   },
 ]
+
 export function Works() {
   return (
     <div className='px-6 py-3'>
@@ -29,15 +30,7 @@ export function Works() {
       <Spacer y={10} />
       <div className='flex justify-between gap-10'>
         {items.map((item) => (
-          <Card key={item.title} className='relative w-full rounded-3xl bg-transparent py-10'>
-            <CardHeader className='flex justify-center overflow-visible py-2 after:absolute after:left-1/2 after:top-10 after:-z-10 after:h-16 after:w-14 after:rounded after:bg-yellow-300/30 after:blur-sm dark:after:bg-yellow-400/10'>
-              {item.icon}
-            </CardHeader>
-            <CardBody className='flex-col items-start gap-2 px-4'>
-              <p>{item.title}</p>
-              <small className='text-default-500'>{item.body}</small>
-            </CardBody>
-          </Card>
+          <WorkContent key={item.title} item={item} />
         ))}
       </div>
       <div className='mt-5 flex justify-end'>
