@@ -4,7 +4,7 @@ import { Works } from '@/app/_components/Works'
 
 export default function Home() {
   return (
-    <main className='mx-auto min-h-screen max-w-5xl p-5'>
+    <main className='mx-auto min-h-screen max-w-5xl px-5'>
       <Header />
       <About />
       <Works />
