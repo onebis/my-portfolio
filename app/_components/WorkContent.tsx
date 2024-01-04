@@ -1,26 +1,10 @@
 'use client'
-import {
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  useDisclosure,
-} from '@nextui-org/react'
 
-import { ReactNode } from 'react'
+import { Card, CardBody, CardHeader, useDisclosure } from '@nextui-org/react'
+import { WorkContentModal } from '@/app/_components/WorkContentModal'
+import { WorkItemTop } from '@/app/_libs/type'
 
-type Item = {
-  icon: ReactNode
-  title: string
-  body: string
-}
-
-export function WorkContent({ key, item }: { key: string; item: Item }) {
+export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
     <>
@@ -36,52 +20,11 @@ export function WorkContent({ key, item }: { key: string; item: Item }) {
           {item.icon}
         </CardHeader>
         <CardBody className='flex-col items-start gap-2 px-4'>
-          <p>{item.title}</p>
+          <p className='text-lg font-bold'>{item.title}</p>
           <small className='text-default-500'>{item.body}</small>
         </CardBody>
       </Card>
-      <ContentModal
-        title={item.title}
-        content={item.body}
-        isOpen={isOpen}
-        onOpen={onOpen}
-        onOpenChange={onOpenChange}
-      />
+      <WorkContentModal item={item} isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
-  )
-}
-
-const ContentModal = ({
-  title,
-  content,
-  isOpen,
-  onOpen,
-  onOpenChange,
-}: {
-  title: string
-  content: string
-  isOpen: boolean
-  onOpen: () => void
-  onOpenChange: () => void
-}) => {
-  return (
-    <Modal isOpen={isOpen} onOpenChange={onOpenChange} size='5xl' backdrop='blur'>
-      <ModalContent>
-        {(onClose) => (
-          <>
-            <ModalHeader className='flex flex-col gap-1'>{title}</ModalHeader>
-            <ModalBody>{content}</ModalBody>
-            <ModalFooter>
-              <Button color='danger' variant='light' onPress={onClose}>
-                Close
-              </Button>
-              <Button color='primary' onPress={onClose}>
-                Action
-              </Button>
-            </ModalFooter>
-          </>
-        )}
-      </ModalContent>
-    </Modal>
   )
 }
