@@ -1,55 +1,54 @@
 'use client'
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react'
-import { wrap } from 'framer-motion'
+import clsx from 'clsx'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import { ThemeSwitcher } from '@/app/_components/ThemeSwitcher'
 import { GithubIcon } from '@/public/icons/github'
 
+const items = [
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Works',
+    href: '/works',
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
+]
+const menuItems = [
+  'Profile',
+  'Dashboard',
+  'Activity',
+  'Analytics',
+  'System',
+  'Deployments',
+  'My Settings',
+  'Team Settings',
+  'Help & Feedback',
+  'Log Out',
+]
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const items = [
-    {
-      label: 'About',
-      href: '/about',
-    },
-    {
-      label: 'Works',
-      href: '/works',
-    },
-    {
-      label: 'Blog',
-      href: '/blog',
-    },
-  ]
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ]
+  const pathname = usePathname()
 
   return (
-    <Navbar
-      onMenuOpenChange={setIsMenuOpen}
-      className='font-potta_one'
-      // classNames={{ wrapper: 'full' }}
-      maxWidth='full'
-    >
+    <Navbar onMenuOpenChange={setIsMenuOpen} className='h-20 font-potta_one' maxWidth='full'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className='sm:hidden'
         />
         <NavbarBrand>
-          <p className='font-bold text-inherit'>ACME</p>
+          <Link href='/'>
+            <p className='font-bold text-inherit'>ACME</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -59,7 +58,12 @@ export function Header() {
             <NavbarItem key={item.href}>
               <Link
                 href={item.href}
-                className='text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300'
+                className={clsx(
+                  'text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
+                  {
+                    'text-amber-400 dark:text-amber-300': pathname === item.href,
+                  },
+                )}
               >
                 {item.label}
               </Link>
