@@ -7,14 +7,14 @@ export default function about() {
       <Card shadow='none' isBlurred={true} className='w-full'>
         <CardBody>
           <div className='grid grid-cols-6 items-center  gap-3 md:grid-cols-12'>
-            <div className='col-span-6 flex flex-col items-center'>
+            <div className='col-span-6 flex flex-col items-center md:col-span-4'>
               <Image src='/images/self_image.png' alt='self image' width={80} />
               <div className='flex flex-col'>
                 <p className='font-bold capitalize'>minoru horiuchi</p>
                 <p className='inline text-small capitalize text-gray-400'>web developer</p>
               </div>
             </div>
-            <div className='col-span-6 flex flex-col gap-3'>
+            <div className='col-span-6 flex flex-col gap-3 md:col-span-8'>
               <p>
                 フリーランスエンジニアの堀内と申します。創価大学での学びを経て、医師を目指した時期もありましたが、2016年にITの世界に魅了され、この分野でのキャリアをスタートしました。
               </p>
