@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardBody, CardFooter, CardHeader, Chip, useDisclosure } from '@nextui-org/react'
+import { Card, CardBody, CardHeader, useDisclosure } from '@nextui-org/react'
 import { WorkContentModal } from '@/app/_components/WorkContentModal'
 import { WorkItemTop } from '@/app/_libs/type'
 
