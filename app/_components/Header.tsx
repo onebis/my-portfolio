@@ -17,6 +17,10 @@ const items = [
     href: '/works',
   },
   {
+    label: 'Products',
+    href: '/products',
+  },
+  {
     label: 'Blog',
     href: '/blog',
   },
@@ -61,7 +65,7 @@ export function Header() {
                 className={clsx(
                   'text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
                   {
-                    'text-amber-400 dark:text-amber-300': pathname === item.href,
+                    'text-amber-400 dark:text-amber-300': pathname.startsWith(item.href),
                   },
                 )}
               >
