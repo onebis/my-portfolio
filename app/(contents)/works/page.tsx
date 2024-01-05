@@ -1,36 +1,56 @@
-import { Image } from '@nextui-org/image'
-import { Card, CardBody, CardHeader } from '@nextui-org/react'
+import { Spacer } from '@nextui-org/react'
+import { MoreButton } from '@/app/_components/MoreButton'
+import { WorkContent } from '@/app/_components/WorkContent'
+import { Works } from '@/app/_components/Works'
+import { Account } from '@/public/icons/account'
+import { AccountDetail } from '@/public/icons/account_detail'
+import { AccountTree } from '@/public/icons/account_tree'
+
+const items = [
+  {
+    icon: <Account className='fill-gray-700 dark:fill-gray-300/80' />,
+    title: '600万件のデータ移行',
+    body: '顧客のデータを移行するため、移行作業に従事。 チームリーダーを担当し自身の業務と並行でタスク管理なども行う',
+    term: '2017~2019',
+    detail: `リラクゼーション業界における600万件の顧客データの移行と既存システムの改修プロジェクト。\nシステムの改修に加えて、データ移行の必要があり個人情報や、カード情報、履歴データ等を対象に実施。\n元々8時間かかっていたデータ移行処理を改善し、1時間ほどで完了するように改修を行いました。\n既存のプロセスをリファクタリングし、クエリのチューニングとメモリ管理の最適化を行い実現。特に、データの整合性の維持、不正確なデータや予期せぬ入力値への対応に苦労しました。\n自身がチームリーダーとなり、タスク管理や実装を平行して業務を担当。`,
+    stack: 'PHP,CakePHP(ver3),MySQL,apache',
+    position: 'チームリーダー・プログラマー',
+    scale: 'チーム人数12人',
+  },
+  {
+    icon: <AccountTree className='fill-gray-700 dark:fill-gray-300/80' />,
+    title: '人事システム開発',
+    body: '大手広告代理店の社内人事の紙面媒体の手続きをシステム化。。要件のヒアリングを行い、機能設計をし実装まで幅広く担当。',
+    term: '2020~2023',
+    detail:
+      '大手広告代理店の社内人事の紙面媒体での手続きをシステム化しました。もともと別のサービスを使用し、一部エクセル管理していた部分をシステム化するようにしました。別サービスとの連携をしつつ、フロー管理をするシステムの構築を行いました。\n要件のヒアリング、機能設計、実装まで幅広く担当。認証に既存の社員データを使用し、ユーザーのアクセス権も考慮する必要がありました。',
+    stack: 'PHP(ver7.4),Laravel(ver8.2.1),MSSQL,nginx',
+    position: 'フルスタックエンジニア',
+    scale: 'チーム人数8人',
+  },
+  {
+    icon: <AccountDetail className='fill-gray-700 dark:fill-gray-300/80' />,
+    title: '求人管理システム開発',
+    body: 'リードエンジニアとして基盤設計から担当。お客様とのディレクションを含め、検索処理の高速化・技術選定・コードレビュー・仕様調整など全般的に関わらせていただきました。',
+    term: '2023~2024',
+    detail:
+      '求人管理をしている既存システムから、新しくリプレイスを行うプロジェクト。\nリードエンジニアとして基盤設計から担当。お客様とのディレクションを含め、技術選定・コードレビュー・仕様調整など全般的に関わらせていただきました。要件の中で検索処理の高速化が必須なためDBのアーキテクチャなど考慮する部分が多くありました。\nコードレビューの文化がなかったため、コードの保守性や安全性を担保するようにレビューを導入。どうしてもバグが入り込むものの、最小限に抑えることができました。メンバーが作業しやすいコードになることや、一貫性のあるコードになることを意識していました。',
+    stack: 'PHP(ver8.4),Laravel(ver10.2),MySQL,nginx',
+    position: 'リードエンジニア・フルスタックエンジニア',
+    scale: 'チーム人数10人',
+  },
+]
 
 export default function about() {
   return (
-    <div className='flex w-full items-center justify-center'>
-      <Card shadow='none' isBlurred={true} className='w-full'>
-        <CardBody>
-          <div className='grid grid-cols-6 items-center  gap-3 md:grid-cols-12'>
-            <div className='col-span-6 flex flex-col items-center'>
-              <Image src='/images/self_image.png' alt='self image' width={80} />
-              <div className='flex flex-col'>
-                <p className='font-bold capitalize'>minoru horiuchi</p>
-                <p className='inline text-small capitalize text-gray-400'>web developer</p>
-              </div>
-            </div>
-            <div className='col-span-6 flex flex-col gap-3'>
-              <p>
-                フリーランスエンジニアの堀内と申します。創価大学での学びを経て、医師を目指した時期もありましたが、2016年にITの世界に魅了され、この分野でのキャリアをスタートしました。
-              </p>
-              <p>
-                2017年からは、PHPをメイン言語としてWebシステム開発に携わり、さまざまなプロジェクトで技術力を磨いてきました。
-              </p>
-              <p>
-                2019年には独立し、フリーランスとしてより幅広い経験を積むことを決意しました。主な技術スタックは、PHP、Laravel、React、Next.js、Flutterに及びます。
-              </p>
-              <p>
-                クライアントの要望に応えるため柔軟で効率的なソリューションを提供しています。技術を通じてリアルな問題解決を行い、プロジェクトの成功に貢献いたします。
-              </p>
-            </div>
-          </div>
-        </CardBody>
-      </Card>
+    <div className='px-6 py-3'>
+      <h1 className='font-potta_one text-xl'>Works</h1>
+      <Spacer y={10} />
+      <div className='flex justify-between gap-10'>
+        {items.map((item) => (
+          <WorkContent key={item.title} item={item} />
+        ))}
+      </div>
     </div>
   )
 }
