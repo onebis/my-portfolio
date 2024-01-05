@@ -10,3 +10,10 @@ export type WorkItemTop = {
   position: string
   scale: string
 }
+
+export type ProductItemTop = {
+  image: string
+  title: string
+  stack: string
+  description: string
+}

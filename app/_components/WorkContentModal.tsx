@@ -35,20 +35,11 @@ export function WorkContentModal({
                   {line}
                 </p>
               ))}
-              <ul className='mt-10 text-small'>
-                <li className='flex gap-3'>
-                  <p>規模：</p>
-                  <p>{item.scale}</p>
-                </li>
-                <li className='flex gap-3'>
-                  <p>ポジション：</p>
-                  <p>{item.position}</p>
-                </li>
-                <li className='flex gap-3'>
-                  <p>Stack:</p>
-                  <p>{item.stack}</p>
-                </li>
-              </ul>
+              <div className='mt-10 text-small'>
+                <p>規模：{item.scale}</p>
+                <p>ポジション：{item.position}</p>
+                <p>STACK：{item.stack}</p>
+              </div>
             </ModalBody>
             <ModalFooter>
               <Button color='danger' variant='light' onPress={onClose}>
