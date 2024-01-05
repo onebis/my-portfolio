@@ -1,7 +1,7 @@
 import { Card, CardBody, CardHeader, Link } from '@nextui-org/react'
 import { work_contents } from '@/app/_libs/datas/work_work_contents'
 
-export default function about() {
+export default function works() {
   return (
     <div className='px-6 py-3'>
       <div className='grid grid-cols-12 gap-10'>
