@@ -91,11 +91,11 @@ export function Header() {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} href='#' variant='flat' size='sm' isIconOnly>
-            en
-          </Button>
-        </NavbarItem>
+        {/*<NavbarItem>*/}
+        {/*  <Button as={Link} href='#' variant='flat' size='sm' isIconOnly>*/}
+        {/*    en*/}
+        {/*  </Button>*/}
+        {/*</NavbarItem>*/}
       </NavbarContent>
 
       <NavbarMenu>

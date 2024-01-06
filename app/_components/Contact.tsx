@@ -9,22 +9,26 @@ export function Contact() {
       <h1 className='font-potta_one text-xl capitalize'>contact</h1>
       <Spacer y={8} />
       <div className='flex flex-col gap-3 pl-10'>
-        <Link
-          isExternal
-          href='https://github.com/onebis/my-portfolio'
-          color='foreground'
-          className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
-        >
-          <GithubIcon className='mr-3' /> github
-        </Link>
-        <Link
-          isExternal
-          href='https://twitter.com/onebisTech'
-          color='foreground'
-          className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
-        >
-          <XIcon className='mr-3' /> X(twitter)
-        </Link>
+        <div>
+          <Link
+            isExternal
+            href='https://github.com/onebis/my-portfolio'
+            color='foreground'
+            className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
+          >
+            <GithubIcon className='mr-3' /> github
+          </Link>
+        </div>
+        <div>
+          <Link
+            isExternal
+            href='https://twitter.com/onebisTech'
+            color='foreground'
+            className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
+          >
+            <XIcon className='mr-3' /> X(twitter)
+          </Link>
+        </div>
       </div>
     </div>
   )
