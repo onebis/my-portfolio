@@ -1,27 +1,31 @@
-import { Image } from '@nextui-org/image'
-import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
-import { MoreButton } from '@/app/_components/MoreButton'
+import { Link, Spacer } from '@nextui-org/react'
+import React from 'react'
+import { GithubIcon } from '@/public/icons/github'
+import { XIcon } from '@/public/icons/x'
 
-const items = [
-  {
-    image: 'images/iOS.png',
-    title: 'NextJsで作るブログサイト',
-  },
-  {
-    image: 'images/blog_image.png',
-    title: 'NextJsで作るブログサイト',
-  },
-  {
-    image: 'images/sample_site.png',
-    title: 'NextJsで作るブログサイト',
-  },
-]
 export function Contact() {
   return (
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl capitalize'>contact</h1>
-      <Spacer y={10} />
-      <div className='flex justify-between gap-10'></div>
+      <Spacer y={8} />
+      <div className='flex flex-col gap-3 pl-10'>
+        <Link
+          isExternal
+          href='https://github.com/onebis/my-portfolio'
+          color='foreground'
+          className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
+        >
+          <GithubIcon className='mr-3' /> github
+        </Link>
+        <Link
+          isExternal
+          href='https://twitter.com/onebisTech'
+          color='foreground'
+          className='text-xl hover:text-amber-400 dark:hover:text-amber-300'
+        >
+          <XIcon className='mr-3' /> X(twitter)
+        </Link>
+      </div>
     </div>
   )
 }
