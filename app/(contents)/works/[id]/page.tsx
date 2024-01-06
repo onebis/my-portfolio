@@ -24,11 +24,13 @@ export default function page({ params }: { params: { id: number } }) {
           <p>STACK：{item.stack}</p>
         </div>
       </div>
-      <Link href={'/works'} className='flex justify-end'>
-        <Button color='danger' variant='light'>
-          Back
-        </Button>
-      </Link>
+      <div className='flex justify-end'>
+        <Link href={'/works'}>
+          <Button color='danger' variant='light'>
+            Back
+          </Button>
+        </Link>
+      </div>
     </div>
   )
 }

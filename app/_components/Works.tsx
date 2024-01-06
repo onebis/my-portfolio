@@ -7,7 +7,7 @@ export function Works() {
   return (
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl'>Works</h1>
-      <Spacer y={10} />
+      <Spacer y={3} />
       <div className='flex justify-between gap-10'>
         {items
           .filter((item) => [1, 2, 3].includes(item.id))

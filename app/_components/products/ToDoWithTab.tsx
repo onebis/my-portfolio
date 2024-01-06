@@ -80,7 +80,7 @@ const ProductContentModal = ({
               <Link
                 isExternal
                 href='https://apps.apple.com/ae/app/todo-with-tab/id6461047942'
-                className='mt-5 flex w-full justify-center'
+                className='mx-auto mt-5 flex justify-center'
               >
                 <Image src='images/appstore.png' alt='image' width={200} />
               </Link>

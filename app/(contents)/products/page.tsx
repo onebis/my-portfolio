@@ -5,12 +5,14 @@ import { product_contents } from '@/app/_libs/datas/product_contents'
 export default function page() {
   return (
     <div className='px-6 py-3'>
+      <h1 className='font-potta_one text-xl'>Products</h1>
+      <Spacer y={3} />
       <div className='grid grid-cols-12 gap-10'>
         {Object.entries(product_contents).map(([key, item]) => {
           return (
             <Link
               key={item.href}
-              href={`products/todoapp`}
+              href={`products/${item.href}`}
               className='col-span-12 w-full sm:col-span-6 md:col-span-4'
             >
               <Card
