@@ -1,5 +1,5 @@
 import { Card, CardBody, CardHeader, Link } from '@nextui-org/react'
-import { work_contents } from '@/app/_libs/datas/work_work_contents'
+import { work_contents } from '@/app/_libs/datas/work_contents'
 
 export default function works() {
   return (

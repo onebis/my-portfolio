@@ -13,13 +13,9 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
+import { product_contents } from '@/app/_libs/datas/product_contents'
 
-const item = {
-  image: 'images/sample_site.png',
-  title: 'サンプルサイト作成',
-  stack: 'NextJs,TypeScript,NextUI',
-  description: 'web',
-}
+const item = product_contents.sample_site
 
 export function SamplePage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()

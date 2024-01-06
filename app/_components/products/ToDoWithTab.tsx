@@ -13,13 +13,9 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
+import { product_contents } from '@/app/_libs/datas/product_contents'
 
-const item = {
-  image: 'images/ToDoWithTabIcon.png',
-  title: 'ToDo with Tab',
-  stack: 'Flutter,dart',
-  description: 'iOS/Androidアプリ',
-}
+const item = product_contents.todoapp
 
 export function ToDoWithTab() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()

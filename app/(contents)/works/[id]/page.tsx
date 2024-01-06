@@ -1,6 +1,6 @@
 import { Button, Chip, Link } from '@nextui-org/react'
 import React from 'react'
-import { work_contents as items } from '@/app/_libs/datas/work_work_contents'
+import { work_contents as items } from '@/app/_libs/datas/work_contents'
 
 export default function page({ params }: { params: { id: number } }) {
   const item = items[params.id - 1]

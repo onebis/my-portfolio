@@ -9,7 +9,7 @@ export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
   return (
     <>
       <Card
-        className='relative w-full rounded-3xl bg-transparent pb-2 pt-10'
+        className='relative w-full grow rounded-3xl bg-transparent pb-2 pt-10'
         onPress={onOpen}
         isHoverable={true}
         isPressable={true}

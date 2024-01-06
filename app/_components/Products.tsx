@@ -15,7 +15,7 @@ export function Products() {
         <SamplePage />
       </div>
       <div className='mt-5 flex justify-end'>
-        <MoreButton />
+        <MoreButton href={'/products'} />
       </div>
     </div>
   )
