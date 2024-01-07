@@ -1,4 +1,5 @@
 import { Spacer } from '@nextui-org/react'
+import React from 'react'
 import { MoreButton } from '@/app/_components/MoreButton'
 import { WorkContent } from '@/app/_components/WorkContent'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
