@@ -42,7 +42,7 @@ export const work_contents = [
   {
     id: 4,
     icon: <AccountDetail className='fill-gray-700 dark:fill-gray-300/80' />,
-    title: '求人管理システム開発',
+    title: '求人管理システム開発2',
     body: 'リードエンジニアとして基盤設計から担当。お客様とのディレクションを含め、検索処理の高速化・技術選定・コードレビュー・仕様調整など全般的に関わらせていただきました。',
     term: '2023~2024',
     detail:

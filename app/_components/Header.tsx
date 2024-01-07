@@ -1,7 +1,8 @@
 'use client'
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
 import clsx from 'clsx'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { ThemeSwitcher } from '@/app/_components/ThemeSwitcher'
@@ -76,11 +77,9 @@ export function Header() {
         })}
         <NavbarItem>
           <Link
-            isExternal
-            showAnchorIcon
             href='https://github.com/onebis/my-portfolio'
             color='foreground'
-            className='hover:text-amber-400 dark:hover:text-amber-300'
+            className='flex items-center hover:text-amber-400 dark:hover:text-amber-300'
           >
             <GithubIcon className='mr-[2px]' /> github
           </Link>
@@ -98,22 +97,22 @@ export function Header() {
         {/*</NavbarItem>*/}
       </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'
-              }
-              className='w-full'
-              href='#'
-              size='lg'
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      {/*<NavbarMenu>*/}
+      {/*  {menuItems.map((item, index) => (*/}
+      {/*    <NavbarMenuItem key={`${item}-${index}`}>*/}
+      {/*      <Link*/}
+      {/*        color={*/}
+      {/*          index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'*/}
+      {/*        }*/}
+      {/*        className='w-full'*/}
+      {/*        href='#'*/}
+      {/*        size='lg'*/}
+      {/*      >*/}
+      {/*        {item}*/}
+      {/*      </Link>*/}
+      {/*    </NavbarMenuItem>*/}
+      {/*  ))}*/}
+      {/*</NavbarMenu>*/}
     </Navbar>
   )
 }

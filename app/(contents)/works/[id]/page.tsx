@@ -1,4 +1,5 @@
-import { Button, Chip, Link } from '@nextui-org/react'
+import { Button, Chip } from '@nextui-org/react'
+import Link from 'next/link'
 import React from 'react'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
 

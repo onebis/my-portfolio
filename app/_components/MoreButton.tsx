@@ -1,6 +1,6 @@
-import { Button, Link } from '@nextui-org/react'
-
-export function MoreButton({ href }: { href?: string }) {
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
+export function MoreButton({ href = '' }: { href: string }) {
   return (
     <Link href={href}>
       <Button

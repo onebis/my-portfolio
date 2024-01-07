@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/image'
-import { Card, CardBody, CardHeader, Link, Spacer } from '@nextui-org/react'
+import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
+import Link from 'next/link'
 import { product_contents } from '@/app/_libs/datas/product_contents'
 
 export default function page() {

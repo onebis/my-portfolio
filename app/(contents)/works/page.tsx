@@ -1,10 +1,12 @@
-import { Card, CardBody, CardHeader, Link, Spacer } from '@nextui-org/react'
+import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
+import Link from 'next/link'
 import { work_contents } from '@/app/_libs/datas/work_contents'
 
 export default function works() {
   return (
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl'>Works</h1>
+      <Spacer y={3} />
       <div className='grid grid-cols-12 gap-10'>
         {work_contents.map((item) => (
           <Link
