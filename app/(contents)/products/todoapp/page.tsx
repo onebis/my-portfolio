@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/image'
-import { Button, Link } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -23,7 +24,7 @@ export default function page() {
           <Image src='/images/todo_image.png' alt='image' width={200} height={200} />
         </div>
         <div className='mt-6 flex justify-center'>
-          <Link isExternal href='https://apps.apple.com/ae/app/todo-with-tab/id6461047942'>
+          <Link href='https://apps.apple.com/ae/app/todo-with-tab/id6461047942'>
             <Image src='/images/appstore.png' alt='image' width={200} />
           </Link>
         </div>

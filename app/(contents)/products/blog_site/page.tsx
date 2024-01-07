@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/image'
-import { Button, Link } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -18,9 +19,7 @@ export default function page() {
           <Image src='/images/blog_image.png' alt='image' width={200} />
         </div>
         <div className='mt-6 flex justify-center'>
-          <Link isExternal href='#'>
-            my blog
-          </Link>
+          <Link href='#'>my blog</Link>
         </div>
 
         <div className='flex justify-end'>
