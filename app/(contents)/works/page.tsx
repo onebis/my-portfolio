@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import { work_contents } from '@/app/_libs/datas/work_contents'
 
-export default function works() {
+export default function Works() {
   const ref = React.useRef(null)
 
   return (

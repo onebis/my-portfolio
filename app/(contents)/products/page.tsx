@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { product_contents } from '@/app/_libs/datas/product_contents'
 
-export default function page() {
+export default function Products() {
   const ref = React.useRef(null)
 
   return (
