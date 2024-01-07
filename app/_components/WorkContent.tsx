@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardBody, CardHeader, useDisclosure } from '@nextui-org/react'
-import { useInView, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import React from 'react'
 import { WorkContentModal } from '@/app/_components/WorkContentModal'
 import { WorkItemTop } from '@/app/_libs/type'
@@ -9,24 +9,14 @@ import { WorkItemTop } from '@/app/_libs/type'
 export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const ref = React.useRef(null)
-  const isVisible = useInView(ref)
-  const variants = {
-    hidden: { opacity: 0, x: 0, y: 20 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -0, y: 20 },
-  }
   return (
     <>
       <motion.div
-        // initial={{ y: 60, opacity: 0 }}
-        // animate={isVisible ? { y: 0, opacity: 1 } : ''}
-        // transition={{ duration: 0.5, ease: 'easeOut' }}
         ref={ref}
-        initial='hidden'
-        animate='enter'
-        exit='exit'
-        variants={variants}
-        transition={{ duration: 0.5, type: 'easeInOut' }}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, x: -0, y: 20 }}
+        transition={{ duration: 1, type: 'easeInOut' }}
         className='w-full'
       >
         <Card
