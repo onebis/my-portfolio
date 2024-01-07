@@ -10,7 +10,7 @@ export function About() {
           <Image src='/images/self_image.png' alt='self image' width={100} />
           <div className='flex flex-col'>
             <p className='font-bold capitalize'>minoru horiuchi</p>
-            <p className='inline text-small capitalize text-gray-400'>web developer</p>
+            <p className='inline text-small capitalize text-gray-400'>Full stack developer</p>
           </div>
         </CardHeader>
         <CardBody>

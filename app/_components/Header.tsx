@@ -79,6 +79,8 @@ export function Header() {
             href='https://github.com/onebis/my-portfolio'
             color='foreground'
             className='flex items-center hover:text-amber-400 dark:hover:text-amber-300'
+            showAnchorIcon
+            isExternal
           >
             <GithubIcon className='mr-[2px]' /> github
           </Link>

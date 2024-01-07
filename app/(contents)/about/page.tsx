@@ -14,7 +14,9 @@ export default function about() {
                 <Image src='/images/self_image.png' alt='self image' width={80} />
                 <div className='flex flex-col'>
                   <p className='font-bold capitalize'>minoru horiuchi</p>
-                  <p className='inline text-small capitalize text-gray-400'>web developer</p>
+                  <p className='inline text-small capitalize text-gray-400'>
+                    Full stack web developer
+                  </p>
                 </div>
               </div>
               <div className='col-span-6 flex flex-col gap-3 md:col-span-8'>
