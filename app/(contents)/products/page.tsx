@@ -17,7 +17,6 @@ export default function page() {
             <Card
               className='relative w-full rounded-xl bg-transparent '
               isHoverable={true}
-              isPressable={true}
               disableRipple
             >
               <CardHeader className='flex-col items-start px-4 pb-0 pt-2'>
