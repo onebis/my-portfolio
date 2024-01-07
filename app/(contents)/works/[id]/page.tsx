@@ -1,5 +1,4 @@
-import { Button, Chip } from '@nextui-org/react'
-import Link from 'next/link'
+import { Button, Chip, Link } from '@nextui-org/react'
 import React from 'react'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
 
@@ -26,11 +25,9 @@ export default function page({ params }: { params: { id: number } }) {
         </div>
       </div>
       <div className='flex justify-end'>
-        <Link href={'/works'}>
-          <Button color='danger' variant='light'>
-            Back
-          </Button>
-        </Link>
+        <Button color='danger' variant='light' as={Link} href={'/works'}>
+          Back
+        </Button>
       </div>
     </div>
   )

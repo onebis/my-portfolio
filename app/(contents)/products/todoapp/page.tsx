@@ -1,6 +1,5 @@
 import { Image } from '@nextui-org/image'
-import { Button } from '@nextui-org/react'
-import Link from 'next/link'
+import { Button, Link } from '@nextui-org/react'
 import React from 'react'
 
 export default function page() {
@@ -29,11 +28,9 @@ export default function page() {
           </Link>
         </div>
         <div className='flex justify-end'>
-          <Link href={'/products'}>
-            <Button color='danger' variant='light'>
-              Back
-            </Button>
-          </Link>
+          <Button color='danger' variant='light' as={Link} href={'/products'}>
+            Back
+          </Button>
         </div>
       </div>
     </div>
