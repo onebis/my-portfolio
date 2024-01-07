@@ -4,7 +4,7 @@ import { Button, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export default function page() {
+export default function SmplePage() {
   const ref = React.useRef(null)
 
   return (

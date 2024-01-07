@@ -4,7 +4,7 @@ import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export default function about() {
+export default function About() {
   const ref = React.useRef(null)
 
   return (

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
 
-export default function page({ params }: { params: { id: number } }) {
+export default function WorkContent({ params }: { params: { id: number } }) {
   const item = items[params.id - 1]
   const ref = React.useRef(null)
 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 
-export default function page() {
+export default function BlogSite() {
   const ref = React.useRef(null)
 
   return (
