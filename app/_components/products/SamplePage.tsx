@@ -20,15 +20,15 @@ const item = product_contents.sample_site
 export function SamplePage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
-    <div>
+    <>
       <Card
-        className='relative w-full rounded-xl bg-transparent'
+        className='relative rounded-xl bg-transparent sm:w-full'
         onPress={onOpen}
         isHoverable={true}
         isPressable={true}
         disableRipple
       >
-        <CardHeader className='flex-col items-start px-4 pb-0 pt-2'>
+        <CardHeader className='flex-col items-center px-4 pb-0 pt-2 sm:items-start'>
           <h4 className='text-large font-bold'>{item.title}</h4>
           <small className='text-default-500'>{item.description}</small>
           <p className='text-tiny font-bold'>{item.stack}</p>
@@ -39,12 +39,12 @@ export function SamplePage() {
             src={item.image}
             alt='native app image'
             width={270}
-            className='rounded-xl object-cover'
+            className='mx-auto rounded-xl object-cover'
           />
         </CardBody>
       </Card>
       <ProductContentModal isOpen={isOpen} onOpenChange={onOpenChange} />
-    </div>
+    </>
   )
 }
 

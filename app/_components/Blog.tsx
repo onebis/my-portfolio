@@ -21,7 +21,7 @@ export function Blog() {
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl capitalize'>blog</h1>
       <Spacer y={10} />
-      <div className='flex justify-between gap-10'>
+      <div className='flex flex-col items-center gap-10 sm:flex-row sm:justify-between'>
         {items.map((item) => (
           <div key={item.title}>
             <Image src={item.image} alt={item.title} width={264} height={180} />
