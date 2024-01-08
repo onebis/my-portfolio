@@ -20,7 +20,7 @@ export default function Works() {
         transition={{ duration: 0.5, type: 'easeInOut' }}
         className='w-full'
       >
-        <div className='grid grid-cols-12 gap-10'>
+        <div className='grid grid-cols-12 gap-5 sm:gap-10'>
           {work_contents.map((item) => (
             <Link
               href={`works/${item.id}`}

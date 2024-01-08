@@ -22,7 +22,7 @@ export default function About() {
         <div className='flex w-full items-center justify-center'>
           <Card shadow='none' isBlurred={true} className='w-full'>
             <CardBody>
-              <div className='grid grid-cols-6 items-center  gap-3 md:grid-cols-12'>
+              <div className='grid grid-cols-6 items-center gap-6 md:grid-cols-12 md:gap-3'>
                 <div className='col-span-6 flex flex-col items-center md:col-span-4'>
                   <Image src='/images/self_image.png' alt='self image' width={80} />
                   <div className='flex flex-col'>

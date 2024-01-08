@@ -46,7 +46,7 @@ export function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className=' hidden gap-7 sm:flex' justify='center'>
+      <NavbarContent className='hidden gap-7 sm:flex' justify='center'>
         {items.map((item) => {
           return (
             <NavbarItem key={item.href}>
@@ -99,7 +99,7 @@ export function Header() {
               onPress={() => setIsMenuOpen(false)}
               href={item.href}
               className={clsx(
-                'text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
+                'font-potta_one text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
                 {
                   'text-amber-400 dark:text-amber-300': pathname.startsWith(item.href),
                 },
