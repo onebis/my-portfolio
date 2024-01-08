@@ -19,7 +19,14 @@ export function WorkContentModal({
   onOpenChange: () => void
 }) {
   return (
-    <Modal isOpen={isOpen} onOpenChange={onOpenChange} size='4xl' backdrop='blur' className='p-10'>
+    <Modal
+      scrollBehavior={'outside'}
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      size='3xl'
+      backdrop='blur'
+      className='p-10'
+    >
       <ModalContent>
         {(onClose) => (
           <>
