@@ -9,20 +9,17 @@ import { ToDoWithTab } from '@/app/_components/products/ToDoWithTab'
 
 export function Products() {
   const ref = React.useRef(null)
-  const isVisible = useInView(ref)
   return (
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl capitalize'>products</h1>
       <Spacer y={10} />
       <motion.div
-        // animate={isVisible ? 'visible' : 'hidden'}
-        // variants={variants}
         initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         ref={ref}
       >
-        <div className='flex justify-between gap-10'>
+        <div className='flex flex-col justify-between gap-10 sm:flex-row'>
           <ToDoWithTab />
           <BlogProduct />
           <SamplePage />

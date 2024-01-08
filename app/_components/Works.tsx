@@ -9,7 +9,7 @@ export function Works() {
     <div className='px-6 py-3'>
       <h1 className='font-potta_one text-xl'>Works</h1>
       <Spacer y={3} />
-      <div className='flex justify-between gap-10'>
+      <div className='flex flex-col justify-between gap-10 sm:flex-row'>
         {items
           .filter((item) => [1, 2, 3].includes(item.id))
           .map((item) => (
