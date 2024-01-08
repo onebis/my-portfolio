@@ -25,30 +25,20 @@ const items = [
     href: '/blog',
   },
 ]
-const menuItems = [
-  'Profile',
-  'Dashboard',
-  'Activity',
-  'Analytics',
-  'System',
-  'Deployments',
-  'My Settings',
-  'Team Settings',
-  'Help & Feedback',
-  'Log Out',
-]
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className='h-20 font-potta_one' maxWidth='full'>
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
+      className='h-20 font-potta_one'
+      maxWidth='full'
+    >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className='sm:hidden'
-        />
         <NavbarBrand>
           <Link href='/'>
             <p className='font-bold text-inherit'>ACME</p>
@@ -91,6 +81,10 @@ export function Header() {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          className='sm:hidden'
+        />
         {/*<NavbarItem>*/}
         {/*  <Button as={Link} href='#' variant='flat' size='sm' isIconOnly>*/}
         {/*    en*/}
@@ -98,22 +92,24 @@ export function Header() {
         {/*</NavbarItem>*/}
       </NavbarContent>
 
-      {/*<NavbarMenu>*/}
-      {/*  {menuItems.map((item, index) => (*/}
-      {/*    <NavbarMenuItem key={`${item}-${index}`}>*/}
-      {/*      <Link*/}
-      {/*        color={*/}
-      {/*          index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'*/}
-      {/*        }*/}
-      {/*        className='w-full'*/}
-      {/*        href='#'*/}
-      {/*        size='lg'*/}
-      {/*      >*/}
-      {/*        {item}*/}
-      {/*      </Link>*/}
-      {/*    </NavbarMenuItem>*/}
-      {/*  ))}*/}
-      {/*</NavbarMenu>*/}
+      <NavbarMenu>
+        {items.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              onPress={() => setIsMenuOpen(false)}
+              href={item.href}
+              className={clsx(
+                'text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
+                {
+                  'text-amber-400 dark:text-amber-300': pathname.startsWith(item.href),
+                },
+              )}
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   )
 }
