@@ -81,8 +81,8 @@ const ProductContentModal = ({
                 <li>STACK：{item.stack}</li>
               </ul>
               <div className='flex w-full justify-center gap-5'>
-                <Image src='images/todo_image.png' alt='image' width={200} />
-                <Image src='images/todo_image.png' alt='image' width={200} />
+                <Image src='/images/todo_image1.png' alt='image' width={200} />
+                <Image src='/images/todo_image2.png' alt='image' width={200} />
               </div>
               <Link
                 isExternal

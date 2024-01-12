@@ -31,8 +31,8 @@ export default function TodoApp() {
           </div>
 
           <div className='mt-5 flex w-full justify-center gap-5'>
-            <Image src='/images/todo_image.png' alt='image' width={200} height={200} />
-            <Image src='/images/todo_image.png' alt='image' width={200} height={200} />
+            <Image src='/images/todo_image1.png' alt='image' width={200} height={200} />
+            <Image src='/images/todo_image2.png' alt='image' width={200} height={200} />
           </div>
           <div className='mt-6 flex justify-center'>
             <Link href='https://apps.apple.com/ae/app/todo-with-tab/id6461047942'>

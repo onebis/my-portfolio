@@ -2,8 +2,10 @@
 import { Image } from '@nextui-org/image'
 import { Card, CardBody, CardHeader, Spacer, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import NextImage from 'next/image'
 import React from 'react'
 import { product_contents } from '@/app/_libs/datas/product_contents'
+
 export default function Products() {
   const ref = React.useRef(null)
 
@@ -38,9 +40,11 @@ export default function Products() {
                 </CardHeader>
                 <CardBody className='my-2 flex items-center overflow-visible'>
                   <Image
+                    as={NextImage}
                     src={item.image}
                     alt='native app image'
                     width={270}
+                    height={184}
                     className='rounded-xl object-cover'
                   />
                 </CardBody>
