@@ -94,9 +94,9 @@ export function Header() {
 
       <NavbarMenu>
         {items.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${index}`}>
             <Link
-              onPress={() => setIsMenuOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
               href={item.href}
               className={clsx(
                 'font-potta_one text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
