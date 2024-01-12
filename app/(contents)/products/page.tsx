@@ -4,7 +4,6 @@ import { Card, CardBody, CardHeader, Spacer, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import { product_contents } from '@/app/_libs/datas/product_contents'
-
 export default function Products() {
   const ref = React.useRef(null)
 
@@ -39,7 +38,6 @@ export default function Products() {
                 </CardHeader>
                 <CardBody className='my-2 flex items-center overflow-visible'>
                   <Image
-                    removeWrapper
                     src={item.image}
                     alt='native app image'
                     width={270}
