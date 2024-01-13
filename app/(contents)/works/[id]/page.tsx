@@ -1,11 +1,12 @@
 'use client'
 import { Button, Chip, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { id } from 'postcss-selector-parser'
 import React from 'react'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
 
 export default function WorkContent({ params }: { params: { id: number } }) {
-  const item = items[params.id - 1]
+  const item = items.filter((item) => item.id == params.id)[0]
   const ref = React.useRef(null)
 
   return (
