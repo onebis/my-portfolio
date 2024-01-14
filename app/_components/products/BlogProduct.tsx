@@ -69,7 +69,7 @@ const ProductContentModal = ({
             <ModalHeader className='text-xl'>{item.title}</ModalHeader>
             <ModalBody className='flex flex-col items-start'>
               <ul>
-                <li>自身の技術ブログを作成</li>
+                <li>coming soon ...</li>
               </ul>
               <ul className='text-small text-default-500'>
                 <li>PLATFORM：{item.description}</li>

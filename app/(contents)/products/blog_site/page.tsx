@@ -19,7 +19,7 @@ export default function BlogSite() {
     >
       <div className='w-full'>
         <div className='flex items-center gap-2 text-xl font-bold'>ブログサイト作成</div>
-        <p className='mt-2 text-lg'>自身の技術ブログを作成</p>
+        <p className='mt-2 text-lg'>coming soon ...</p>
         <div>
           <div className='text-small text-default-500'>
             <p>PLATFORM：web</p>
