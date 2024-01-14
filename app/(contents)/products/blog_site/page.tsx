@@ -28,7 +28,6 @@ export default function BlogSite() {
 
           <div className='mt-5 flex w-full justify-center gap-5'>
             <Image src='/images/blog_image.png' alt='image' width={200} />
-            <Image src='/images/blog_image.png' alt='image' width={200} />
           </div>
           <div className='mt-6 flex justify-center'>
             <Link href='#'>my blog</Link>

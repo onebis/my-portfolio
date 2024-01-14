@@ -13,6 +13,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
+import React from 'react'
 import { product_contents } from '@/app/_libs/datas/product_contents'
 
 const item = product_contents.sample_site
@@ -77,11 +78,16 @@ const ProductContentModal = ({
                 <li>STACK：{item.stack}</li>
               </ul>
               <div className='mt-3 flex w-full justify-center gap-5'>
-                <Image src='/images/sample_site.png' alt='image' width={200} />
-                <Image src='/images/blog_image.png' alt='image' width={200} />
+                <Link href='https://my-lab-pi.vercel.app/example1' isExternal>
+                  <Image src='/images/sample_site.png' alt='image' width={200} />
+                </Link>
               </div>
-              <Link isExternal href='#' className='mx-auto mt-5 flex justify-center'>
-                my sample page
+              <Link
+                href='https://my-lab-pi.vercel.app/example1'
+                isExternal
+                className='mx-auto mt-5 flex justify-center'
+              >
+                my sample site
               </Link>
             </ModalBody>
             <ModalFooter>

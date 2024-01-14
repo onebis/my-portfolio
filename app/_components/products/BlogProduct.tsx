@@ -77,7 +77,6 @@ const ProductContentModal = ({
               </ul>
               <div className='mt-3 flex w-full justify-center gap-5'>
                 <Image src='/images/blog_image.png' alt='image' width={200} />
-                <Image src='/images/blog_image.png' alt='image' width={200} />
               </div>
               <Link isExternal href='#' className='mx-auto mt-5 flex justify-center'>
                 my blog

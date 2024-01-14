@@ -26,11 +26,14 @@ export default function SmplePage() {
           </div>
 
           <div className='mt-5 flex w-full justify-center gap-5'>
-            <Image src='/images/sample_site.png' alt='image' width={200} />
-            <Image src='/images/blog_image.png' alt='image' width={200} />
+            <Link href='https://my-lab-pi.vercel.app/example1' isExternal>
+              <Image src='/images/sample_site.png' alt='image' width={200} />
+            </Link>
           </div>
           <div className='mt-6 flex justify-center'>
-            <Link href='#'>my sample site</Link>
+            <Link href='https://my-lab-pi.vercel.app/example1' isExternal>
+              my sample site
+            </Link>
           </div>
 
           <div className='flex justify-end'>
